@@ -1,0 +1,12 @@
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\obj\Debug\net7.0\FantasyTravel.Logic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\obj\Debug\net7.0\FantasyTravel.Logic.AssemblyInfoInputs.cache
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\obj\Debug\net7.0\FantasyTravel.Logic.AssemblyInfo.cs
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\obj\Debug\net7.0\FantasyTravel.Logic.csproj.CoreCompileInputs.cache
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\obj\Debug\net7.0\FantasyTravel.Logic.sourcelink.json
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\bin\Debug\net7.0\FantasyTravel.Logic.deps.json
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\bin\Debug\net7.0\FantasyTravel.Logic.dll
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\bin\Debug\net7.0\FantasyTravel.Logic.pdb
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\obj\Debug\net7.0\FantasyTravel.Logic.dll
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\obj\Debug\net7.0\refint\FantasyTravel.Logic.dll
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\obj\Debug\net7.0\FantasyTravel.Logic.pdb
+D:\Revature\240205-NET\Omega\FantasyTravel\FantasyTravel.Logic\obj\Debug\net7.0\ref\FantasyTravel.Logic.dll

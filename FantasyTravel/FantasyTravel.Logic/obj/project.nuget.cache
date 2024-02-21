@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "XHTpRjper95GAqS2lE7Hodb2phM8g1+KMNJ0j0sqkQvFXs6tEXoBFYYEs47AEFtuSwbO/tvN3VMUFH8UWjvRhQ==",
+  "success": true,
+  "projectFilePath": "D:\\Revature\\240205-NET\\Omega\\FantasyTravel\\FantasyTravel.Logic\\FantasyTravel.Logic.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Russell\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Russell\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
+    "C:\\Users\\Russell\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
