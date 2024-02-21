@@ -7,15 +7,15 @@ namespace FantasyTravel.Logic {
         public int id {get; set;}
         private static int idSeed = 1;
         public string description {get; set;}
-        public List<string> languages {get; set;}
+        public int language {get; set;}
         public int biomType {get; set;}
         //constructors
         public Place () {}
-        public Place (List<string> languages, int biomType, string name = "", string description = "") {
+        public Place (int language, int biomType, string name = "", string description = "") {
             this.name = name;
             this.description = description;
             this.biomType = biomType;
-            this.languages = languages;
+            this.language = language;
             id = idSeed++;
         }
         //methods

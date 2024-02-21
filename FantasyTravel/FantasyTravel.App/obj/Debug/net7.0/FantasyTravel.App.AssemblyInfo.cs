@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FantasyTravel.App")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66cb0ec48a45bde405f2333c1dca254a59cdf021")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("FantasyTravel.App")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FantasyTravel.App")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

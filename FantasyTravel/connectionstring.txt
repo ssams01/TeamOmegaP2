@@ -1,0 +1,1 @@
+Server=tcp:ijortin-school.database.windows.net,1433;Initial Catalog=School;Persist Security Info=False;User ID=ijortin;Password=j01km@steR;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;

@@ -1,13 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "PNknalx7fcIvF4JDrLrTWeR+AWIjky0Ci3PtDoV5/7A3XQwPZYS8/GnXKCaOb3e4HqnPU8KWIbtJnzEidgpAwQ==",
-  "success": true,
-  "projectFilePath": "D:\\Revature\\240205-NET\\Omega\\FantasyTravel\\FantasyTravel.App\\FantasyTravel.App.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Russell\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.16\\microsoft.netcore.app.ref.7.0.16.nupkg.sha512",
-    "C:\\Users\\Russell\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.16\\microsoft.windowsdesktop.app.ref.7.0.16.nupkg.sha512",
-    "C:\\Users\\Russell\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.16\\microsoft.aspnetcore.app.ref.7.0.16.nupkg.sha512",
-    "C:\\Users\\Russell\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.16\\microsoft.netcore.app.host.win-x64.7.0.16.nupkg.sha512"
-  ],
-  "logs": []
+  "dgSpecHash": "+CnPI0OroRrkS9MI7h5gbXsoWqMH3gSqj9zEF4ITop/ow2TXOv6NR3zsCh81WxB8jDTHcxjutT6cXW3OBKqvfw==",
+  "success": false,
+  "projectFilePath": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.App\\FantasyTravel.App.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Logic\\FantasyTravel.Logic.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Logic\\FantasyTravel.Logic.csproj",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

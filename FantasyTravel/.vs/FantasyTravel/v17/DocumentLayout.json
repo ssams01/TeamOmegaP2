@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Revature\\240205-NET\\Omega\\FantasyTravel\\",
+  "WorkspaceRootPath": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C115677E-D550-4797-9672-19CDA5236825}|FantasyTravel.App\\FantasyTravel.App.csproj|d:\\revature\\240205-net\\omega\\fantasytravel\\fantasytravel.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C115677E-D550-4797-9672-19CDA5236825}|FantasyTravel.App\\FantasyTravel.App.csproj|d:\\users\\ian\\documents\\projects\\240205-net\\teamomegap2\\fantasytravel\\fantasytravel.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C115677E-D550-4797-9672-19CDA5236825}|FantasyTravel.App\\FantasyTravel.App.csproj|solutionrelative:fantasytravel.app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,17 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 63,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Revature\\240205-NET\\Omega\\FantasyTravel\\FantasyTravel.App\\Program.cs",
+              "DocumentMoniker": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.App\\Program.cs",
               "RelativeDocumentMoniker": "FantasyTravel.App\\Program.cs",
-              "ToolTip": "D:\\Revature\\240205-NET\\Omega\\FantasyTravel\\FantasyTravel.App\\Program.cs",
+              "ToolTip": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.App\\Program.cs",
               "RelativeToolTip": "FantasyTravel.App\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-21T21:33:42.445Z",
               "EditorCaption": ""
