@@ -1,0 +1,15 @@
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\FantasyTravel.Data.csproj.AssemblyReference.cache
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\FantasyTravel.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\FantasyTravel.Data.AssemblyInfoInputs.cache
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\FantasyTravel.Data.AssemblyInfo.cs
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\FantasyTravel.Data.csproj.CoreCompileInputs.cache
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\bin\Debug\net7.0\FantasyTravel.Data.deps.json
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\bin\Debug\net7.0\FantasyTravel.Data.dll
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\bin\Debug\net7.0\FantasyTravel.Data.pdb
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\bin\Debug\net7.0\FantasyTravel.Logic.dll
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\bin\Debug\net7.0\FantasyTravel.Logic.pdb
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\FantasyT.5E5D4F79.Up2Date
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\FantasyTravel.Data.dll
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\refint\FantasyTravel.Data.dll
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\FantasyTravel.Data.pdb
+D:\Users\Ian\Documents\Projects\240205-NET\TeamOmegaP2\FantasyTravel\FantasyTravel.Data\obj\Debug\net7.0\ref\FantasyTravel.Data.dll

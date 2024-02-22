@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FantasyTravel.Data\FantasyTravel.Data.csproj" />
     <ProjectReference Include="..\FantasyTravel.Logic\FantasyTravel.Logic.csproj" />
   </ItemGroup>
 

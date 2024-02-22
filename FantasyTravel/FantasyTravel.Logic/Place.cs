@@ -18,6 +18,14 @@ namespace FantasyTravel.Logic {
             this.language = language;
             id = idSeed++;
         }
+        public Place(int id, int language, int biomType, string name = "", string description = "")
+        {
+            this.name = name;
+            this.description = description;
+            this.biomType = biomType;
+            this.language = language;
+            this.id = id;
+        }
         //methods
         public override string ToString()
         {

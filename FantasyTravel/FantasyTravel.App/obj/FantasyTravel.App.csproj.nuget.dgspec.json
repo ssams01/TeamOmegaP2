@@ -34,6 +34,9 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+              "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Data\\FantasyTravel.Data.csproj": {
+                "projectPath": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Data\\FantasyTravel.Data.csproj"
+              },
               "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Logic\\FantasyTravel.Logic.csproj": {
                 "projectPath": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Logic\\FantasyTravel.Logic.csproj"
               }
@@ -79,6 +82,86 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Data\\FantasyTravel.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Data\\FantasyTravel.Data.csproj",
+        "projectName": "FantasyTravel.Data",
+        "projectPath": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Data\\FantasyTravel.Data.csproj",
+        "packagesPath": "C:\\Users\\Ian the Superb Guy\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ian the Superb Guy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "D:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "D:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "D:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Logic\\FantasyTravel.Logic.csproj": {
+                "projectPath": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Logic\\FantasyTravel.Logic.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

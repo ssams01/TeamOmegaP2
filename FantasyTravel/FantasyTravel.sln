@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyTravel.App", "Fantas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyTravel.Logic", "FantasyTravel.Logic\FantasyTravel.Logic.csproj", "{31B63120-C9EE-469F-A5C9-185DE64EF8CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyTravel.Data", "FantasyTravel.Data\FantasyTravel.Data.csproj", "{67A7076A-3058-431A-8B00-F5F780DAF208}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{31B63120-C9EE-469F-A5C9-185DE64EF8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31B63120-C9EE-469F-A5C9-185DE64EF8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31B63120-C9EE-469F-A5C9-185DE64EF8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A7076A-3058-431A-8B00-F5F780DAF208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A7076A-3058-431A-8B00-F5F780DAF208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A7076A-3058-431A-8B00-F5F780DAF208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A7076A-3058-431A-8B00-F5F780DAF208}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
