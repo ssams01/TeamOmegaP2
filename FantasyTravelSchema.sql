@@ -1,3 +1,9 @@
+/*  
+    CREATING THE TABLES
+    
+    Comment in/out these commands as necessary.
+*/
+/*
 CREATE SCHEMA [FantasyTravel];
 GO
 
@@ -9,4 +15,11 @@ CREATE TABLE [FantasyTravel].[Places]
     language int NOT NULL,
     biomType int NOT NULL
 ); 
+GO
+*/
+
+/*
+    QUERYING
+*/
+SELECT * FROM [FantasyTravel].[Places];
 GO

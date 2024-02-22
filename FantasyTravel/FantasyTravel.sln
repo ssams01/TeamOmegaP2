@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyTravel.App", "FantasyTravel.App\FantasyTravel.App.csproj", "{C115677E-D550-4797-9672-19CDA5236825}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyTravel.App", "FantasyTravel.App\FantasyTravel.App.csproj", "{EF155BFA-2D4A-4496-A27F-F1CA12C287EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyTravel.Logic", "FantasyTravel.Logic\FantasyTravel.Logic.csproj", "{31B63120-C9EE-469F-A5C9-185DE64EF8CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C115677E-D550-4797-9672-19CDA5236825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C115677E-D550-4797-9672-19CDA5236825}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C115677E-D550-4797-9672-19CDA5236825}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C115677E-D550-4797-9672-19CDA5236825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF155BFA-2D4A-4496-A27F-F1CA12C287EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF155BFA-2D4A-4496-A27F-F1CA12C287EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF155BFA-2D4A-4496-A27F-F1CA12C287EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF155BFA-2D4A-4496-A27F-F1CA12C287EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31B63120-C9EE-469F-A5C9-185DE64EF8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B63120-C9EE-469F-A5C9-185DE64EF8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B63120-C9EE-469F-A5C9-185DE64EF8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B63120-C9EE-469F-A5C9-185DE64EF8CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,18 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "+CnPI0OroRrkS9MI7h5gbXsoWqMH3gSqj9zEF4ITop/ow2TXOv6NR3zsCh81WxB8jDTHcxjutT6cXW3OBKqvfw==",
-  "success": false,
+  "dgSpecHash": "f5WvMdubDoh8Pt3p3jM1i2Viq+f+GlIuh+vqglpzDQQFSHly2iEWL52bbAikj0RvI1ZTPcN4K2ssk8GVoyOJMQ==",
+  "success": true,
   "projectFilePath": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.App\\FantasyTravel.App.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "NU1105",
-      "level": "Error",
-      "message": "Unable to find project information for 'D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Logic\\FantasyTravel.Logic.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
-      "libraryId": "D:\\Users\\Ian\\Documents\\Projects\\240205-NET\\TeamOmegaP2\\FantasyTravel\\FantasyTravel.Logic\\FantasyTravel.Logic.csproj",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  "expectedPackageFiles": [
+    "C:\\Users\\Ian the Superb Guy\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.15\\microsoft.aspnetcore.openapi.7.0.15.nupkg.sha512",
+    "C:\\Users\\Ian the Superb Guy\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Ian the Superb Guy\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Ian the Superb Guy\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Ian the Superb Guy\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Ian the Superb Guy\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Ian the Superb Guy\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
 }
