@@ -79,9 +79,19 @@ namespace FantasyTravel.Data
             throw new NotImplementedException();
         }
 
+        // Implemented by James and Ian
         public async Task DeletePlaceByIdAsync (int id)
         {
-            throw new NotImplementedException();
+            using SqlConnection connection = new SqlConnection(this._connectionString);
+            await connection.OpenAsync();
+            string cmdText = "DELETE FROM [FantasyTravel].[Places] WHERE Id = @id;";
+            using SqlCommand cmd = new SqlCommand(cmdText, connection);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            await cmd.ExecuteNonQueryAsync();
+            await connection.CloseAsync();
+
+            _logger.LogInformation("Executed DeletePlaceByIdAsync; place id #{0} deleted.", id);
         }
     }
 }

@@ -56,5 +56,20 @@ namespace FantasyTravel.Api.Controllers
             }
             return place;
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeletePlaceByIdAsync (int id)
+        {
+            try
+            {
+                await _repo.DeletePlaceByIdAsync(id);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return StatusCode(500);
+            }
+            return StatusCode(200);
+        }
     }
 }
