@@ -1,3 +1,5 @@
 *connectionstring*
 *obj/*
 *bin/*
+*.dll*
+*.pdb*
