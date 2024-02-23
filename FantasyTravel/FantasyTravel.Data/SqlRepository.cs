@@ -47,7 +47,31 @@ namespace FantasyTravel.Data
 
         public async Task<Place> GetPlaceByIdAsync (int id)
         {
-            throw new NotImplementedException();
+
+            using SqlConnection connection = new SqlConnection(this._connectionString);
+            await connection.OpenAsync();
+
+            string cmdText = "SELECT * From [FantasyTravel].[Places] WHERE Id = @id;";
+
+            using SqlCommand cmd = new SqlCommand(cmdText, connection);
+
+            cmd.Parameters.AddWithValue("@id", id);
+
+            using SqlDataReader reader = await cmd.ExecuteReaderAsync();
+            Place tmpPlace = new Place();
+
+            while (await reader.ReadAsync())
+            {
+                int Id = (int)reader["Id"];
+                string name = reader["Name"].ToString() ?? "";
+                string description = reader["Description"].ToString() ?? "";
+                int language = (int)reader["Language"];
+                int biomType = (int)reader["BiomType"];
+
+                tmpPlace = new Place(Id, language, biomType, name, description);
+            }
+            await connection.CloseAsync();
+            return tmpPlace;
         }
 
         public async Task EnterNewPlaceAsync (Place place)

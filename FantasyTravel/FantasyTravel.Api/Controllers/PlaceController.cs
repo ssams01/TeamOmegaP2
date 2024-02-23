@@ -40,5 +40,21 @@ namespace FantasyTravel.Api.Controllers
             }
             return places.ToList();
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Place>> GetPlaceByIdAsync(int id)
+        {
+            Place place;
+            try
+            {
+                place = await _repo.GetPlaceByIdAsync(id);
+            }
+            catch(Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return StatusCode(500);
+            }
+            return place;
+        }
     }
 }

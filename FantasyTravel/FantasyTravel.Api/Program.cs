@@ -5,7 +5,7 @@ using System.IO;
 var builder = WebApplication.CreateBuilder(args);
 
 // CHANGE THIS FILEPATH AS NEEDED
-string _path = @".\..\connectionstring";
+string _path = @".\..\connectionstring.txt";
 
 // Add services to the container.
 string connectionString = "";
