@@ -20,9 +20,10 @@ namespace FantasyTravel.Data
         public async Task<IEnumerable<Place>> GetAllPlacesAsync ()
         {
             using SqlConnection connection = new SqlConnection(this._connectionString);
-
+            //Console.WriteLine("Opening connection");
             await connection.OpenAsync();
-            string cmdText = "SELECT * FROM [FantasyTravel].[Place];";
+            //Console.WriteLine("getting SQL statement");
+            string cmdText = "SELECT * FROM [FantasyTravel].[Places];";
             using SqlCommand cmd = new SqlCommand(cmdText, connection);
             using SqlDataReader reader = await cmd.ExecuteReaderAsync();
             Console.WriteLine("Reader executed...");
