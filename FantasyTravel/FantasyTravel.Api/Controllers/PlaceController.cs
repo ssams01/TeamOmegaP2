@@ -56,5 +56,36 @@ namespace FantasyTravel.Api.Controllers
             }
             return place;
         }
+
+        [HttpPost]
+        public async Task<ActionResult> PostNewPlaceAsync([FromBody]Place place)
+        {
+            Place newPlace = place;
+            try
+            {
+                await _repo.EnterNewPlaceAsync(newPlace);
+            }
+            catch(Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return StatusCode(500);
+            }
+            return StatusCode(200);
+        }
+        
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeletePlaceByIdAsync (int id)
+        {
+            try
+            {
+                await _repo.DeletePlaceByIdAsync(id);
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e, e.Message);
+                return StatusCode(500);
+            }
+            return StatusCode(200);
+        }
     }
 }

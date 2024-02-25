@@ -76,12 +76,40 @@ namespace FantasyTravel.Data
 
         public async Task EnterNewPlaceAsync (Place place)
         {
-            throw new NotImplementedException();
+           
+            using SqlConnection connection = new(_connectionString);
+            await connection.OpenAsync();
+
+            string cmdText = @"INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomType) VALUES (@id, @name, @description, @language, @biomtype);";
+
+            using SqlCommand cmd = new(cmdText, connection);
+
+            cmd.Parameters.AddWithValue("@id", place.id);
+            cmd.Parameters.AddWithValue("@name", place.name);
+            cmd.Parameters.AddWithValue("@description", place.description);
+            cmd.Parameters.AddWithValue("@language", place.language);
+            cmd.Parameters.AddWithValue("@biomtype", place.biomType);
+         
+
+            await cmd.ExecuteNonQueryAsync();
+            await connection.CloseAsync();
+
+            _logger.LogInformation("Executed EnterNewPlaceAsync, place id #{0}: {1} created.", place.id, place.name);
         }
 
+        // Implemented by James and Ian
         public async Task DeletePlaceByIdAsync (int id)
         {
-            throw new NotImplementedException();
+            using SqlConnection connection = new SqlConnection(this._connectionString);
+            await connection.OpenAsync();
+            string cmdText = "DELETE FROM [FantasyTravel].[Places] WHERE Id = @id;";
+            using SqlCommand cmd = new SqlCommand(cmdText, connection);
+            cmd.Parameters.AddWithValue("@id", id);
+
+            await cmd.ExecuteNonQueryAsync();
+            await connection.CloseAsync();
+
+            _logger.LogInformation("Executed DeletePlaceByIdAsync; place id #{0} deleted.", id);
         }
     }
 }
