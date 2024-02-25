@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyTravelClient.App", "FantasyTravelClient.App\FantasyTravelClient.App.csproj", "{CC93A66C-95CF-4DD9-9951-3E5124A492C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC93A66C-95CF-4DD9-9951-3E5124A492C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC93A66C-95CF-4DD9-9951-3E5124A492C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC93A66C-95CF-4DD9-9951-3E5124A492C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC93A66C-95CF-4DD9-9951-3E5124A492C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0091F040-8F57-4CA7-8478-8BB1656CF1BE}
+	EndGlobalSection
+EndGlobal
