@@ -36,6 +36,13 @@ INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomType)
 INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomType) VALUES (10, 'Sellas', 'Located beneath the mirrored memory sea of Esfera, this region is home to many Erda resembling aquatic lifeforms. The vastness of the region in combination with the luminosity of its inhabitants has granted it the moniker "Where the Stars Rest"', 0, 6);
 GO
 
+    /* Russell */
+INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomType) VALUES (11, 'Hyrule Castle', 'A castle where the hyrule family live along with many other human citizens.', 1, 1);
+INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomType) VALUES (12, 'Goron Mountain', 'An extremly tall mountain that can be seen from far away. Home to the rock-eating Gorons.', 4, 2);
+INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomType) VALUES (13, 'Ikana Canyon', 'A Large canyon cut off from society. Filled with zombies, mummies, and ghosts.', 5, 3);
+INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomType) VALUES (14, 'The Great Bay', 'A vast ocean that stretches on for miles. Without guidance, one can get lost sailing these waters.', 4, 2);
+INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomType) VALUES (15, 'The Deku Tree', 'A talking tree that protects the forest.', 8, 1);
+GO
 /*
     QUERYING
 */
