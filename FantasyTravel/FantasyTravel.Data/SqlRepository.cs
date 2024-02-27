@@ -66,9 +66,9 @@ namespace FantasyTravel.Data
                 string name = reader["Name"].ToString() ?? "";
                 string description = reader["Description"].ToString() ?? "";
                 int language = (int)reader["Language"];
-                int biomType = (int)reader["BiomType"];
+                int biomeType = (int)reader["BiomeType"];
 
-                tmpPlace = new Place(Id, language, biomType, name, description);
+                tmpPlace = new Place(Id, language, biomeType, name, description);
             }
             await connection.CloseAsync();
             return tmpPlace;
