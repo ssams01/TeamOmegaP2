@@ -6,6 +6,7 @@
 /*
 CREATE SCHEMA [FantasyTravel];
 GO
+*/
 
 CREATE TABLE [FantasyTravel].[Places]
 (
@@ -13,10 +14,21 @@ CREATE TABLE [FantasyTravel].[Places]
     name varchar(100) NOT NULL,
     description varchar(1000),
     language int NOT NULL,
-    biomeType int NOT NULL
+    biomeType int FOREIGN KEY REFERENCES [FantasyTravel].[Biomes](id) NOT NULL
 ); 
 GO
-*/
+
+
+CREATE TABLE [FantasyTravel].[Biomes]
+(
+    id int PRIMARY KEY,
+    x int NOT NULL,
+    y int NOT NULL,
+    biomeType VARCHAR(255),
+    realLifeReference VARCHAR(255)
+
+)
+
 
 /*  
     DELETIONS
@@ -30,6 +42,12 @@ GO
 /*
     DATA CREATION (SEEDING)
 */
+INSERT INTO[FantasyTravel].[Biomes] (Id, X, Y, BiomeType, RealLifeReference) VALUES (1, 29, 95, 'warm temperate', 'houston');
+INSERT INTO[FantasyTravel].[Biomes] (Id, X, Y, BiomeType, RealLifeReference) VALUES (2, 40, 105, 'tundra', 'rocky mt. nt. park');
+INSERT INTO[FantasyTravel].[Biomes] (Id, X, Y, BiomeType, RealLifeReference) VALUES (3, 48, 110, 'Forest', 'fort belknap');
+INSERT INTO[FantasyTravel].[Biomes] (Id, X, Y, BiomeType, RealLifeReference) VALUES (4, 0, 0, 'artificial climate', 'n/a');
+INSERT INTO[FantasyTravel].[Biomes] (Id, X, Y, BiomeType, RealLifeReference) VALUES (5, 37, 116, 'desert', 'death valley');
+
     /* Stephen */
 INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Naboo', 'A lively planet with lakes, rolling plains, and green hills where vistors can see wildlife or visit the capital where the royal family lives.', 2, 1);
 INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Hoth', 'a planet full of snow and ice where vistors can ski and snowboard, but be careful to stick to the resort for saftey!', 1, 2);
@@ -64,4 +82,7 @@ GO
     QUERYING
 */
 SELECT * FROM [FantasyTravel].[Places];
+GO
+
+SELECT * FROM [FantasyTravel].[Biomes];
 GO
