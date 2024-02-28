@@ -63,9 +63,9 @@ GO
     /* Russell */
 INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Hyrule Castle', 'A castle where the hyrule family live along with many other human citizens.', 1, 1);
 INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Goron Mountain', 'An extremly tall mountain that can be seen from far away. Home to the rock-eating Gorons.', 4, 2);
-INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Ikana Canyon', 'A Large canyon cut off from society. Filled with zombies, mummies, and ghosts.', 5, 3);
-INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('The Great Bay', 'A vast ocean that stretches on for miles. Without guidance, one can get lost sailing these waters.', 4, 2);
-INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('The Deku Tree', 'A talking tree that protects the forest.', 8, 1);
+INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Ikana Canyon', 'A Large canyon cut off from society. Filled with zombies, mummies, and ghosts.', 5, 5);
+INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('The Great Bay', 'A vast ocean that stretches on for miles. Without guidance, one can get lost sailing these waters.', 4, 1);
+INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('The Deku Tree', 'A talking tree that protects the forest.', 8, 3);
 GO
 
     /* James */
