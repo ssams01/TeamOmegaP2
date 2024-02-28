@@ -6,7 +6,15 @@
 /*
 CREATE SCHEMA [FantasyTravel];
 GO
-*/
+
+CREATE TABLE [FantasyTravel].[Biomes]
+(
+    id int PRIMARY KEY,
+    x int NOT NULL,
+    y int NOT NULL,
+    biomeType VARCHAR(255),
+    realLifeReference VARCHAR(255)
+)
 
 CREATE TABLE [FantasyTravel].[Places]
 (
@@ -17,18 +25,7 @@ CREATE TABLE [FantasyTravel].[Places]
     biomeType int FOREIGN KEY REFERENCES [FantasyTravel].[Biomes](id) NOT NULL
 ); 
 GO
-
-
-CREATE TABLE [FantasyTravel].[Biomes]
-(
-    id int PRIMARY KEY,
-    x int NOT NULL,
-    y int NOT NULL,
-    biomeType VARCHAR(255),
-    realLifeReference VARCHAR(255)
-
-)
-
+*/
 
 /*  
     DELETIONS
@@ -57,10 +54,10 @@ INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VA
 GO
     /* Ian */
 INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('El Nath', 'A snowy, mountainous region in the continent of Ossyria. Home to the original guild masters of Maple World.', 5, 2);
-INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Ellinia', 'Forests lush with greenery and trees large enough to house civilizations. Fairies reside here and uphold the magic and life that protects the Maple World.', 11, 1);
+INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Ellinia', 'Forests lush with greenery and trees large enough to house civilizations. Fairies reside here and uphold the magic and life that protects the Maple World.', 11, 3);
 INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Ludus Lake', 'The greater region which contains the Korean Folk Town, the Omega Sector, and the Kingdom of Toys: Ludibrium. Practice caution near the clocktower in Ludibrium.', 11, 4);
 INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('The Hotel Arcus', 'An arid desert region in the middle of continental Grandis. Rumor has it that there is an ancient god dormant under the sands of Arcus...', 7, 5);
-INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Sellas', 'Located beneath the mirrored memory sea of Esfera, this region is home to many Erda resembling aquatic lifeforms. The vastness of the region in combination with the luminosity of its inhabitants has granted it the moniker ''Where the Stars Rest''', 0, 6);
+INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES ('Sellas', 'Located beneath the mirrored memory sea of Esfera, this region is home to many Erda resembling aquatic lifeforms. The vastness of the region in combination with the luminosity of its inhabitants has granted it the moniker ''Where the Stars Rest''', 0, 4);
 GO
 
     /* Russell */
