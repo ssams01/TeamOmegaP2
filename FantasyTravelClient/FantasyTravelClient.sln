@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FantasyTravelClient.App", "FantasyTravelClient.App\FantasyTravelClient.App.csproj", "{CC93A66C-95CF-4DD9-9951-3E5124A492C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyTravelClient.DTO", "FantasyTravelClient.DTO\FantasyTravelClient.DTO.csproj", "{F3DF90A5-4C6D-4C3F-B4E9-DD3A82533842}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyTravelClient.DTO", "FantasyTravelClient.DTO\FantasyTravelClient.DTO.csproj", "{E5A5BC52-1083-4433-9182-BD3DB200F9D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{CC93A66C-95CF-4DD9-9951-3E5124A492C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC93A66C-95CF-4DD9-9951-3E5124A492C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC93A66C-95CF-4DD9-9951-3E5124A492C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3DF90A5-4C6D-4C3F-B4E9-DD3A82533842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3DF90A5-4C6D-4C3F-B4E9-DD3A82533842}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3DF90A5-4C6D-4C3F-B4E9-DD3A82533842}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3DF90A5-4C6D-4C3F-B4E9-DD3A82533842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5A5BC52-1083-4433-9182-BD3DB200F9D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5A5BC52-1083-4433-9182-BD3DB200F9D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5A5BC52-1083-4433-9182-BD3DB200F9D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5A5BC52-1083-4433-9182-BD3DB200F9D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

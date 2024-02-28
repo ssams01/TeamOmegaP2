@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace FantasyTravelClient.DTO
+﻿namespace FantasyTravelClient.DTO
 {
     public class Place
     {
