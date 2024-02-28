@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FantasyTravel.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/place/[controller]")]
     [ApiController]
     public class PlaceController : ControllerBase
     {

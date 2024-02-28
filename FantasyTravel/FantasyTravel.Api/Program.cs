@@ -6,6 +6,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // CHANGE THIS FILEPATH AS NEEDED
 string _path = @".\..\connectionstring";
+string uri1 = "https://api.weather.gov/gridpoints/ALY/";
+string uri2 = "";
 
 // Add services to the container.
 string connectionString = "";
@@ -25,6 +27,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IRepository>(sp => new SqlRepository(connectionString, sp.GetRequiredService<ILogger<SqlRepository>>()));
+builder.Services.AddSingleton<JsonRepository>(wc => new JsonRepository(uri1, uri2, wc.GetRequiredService<ILogger<JsonRepository>>()));
 
 var app = builder.Build();
 

@@ -13,3 +13,23 @@
 6. As a user I want to see the program is running
 
 7. As a user I want to have the program end gracefully and let me know
+
+# Omega Project Description:
+This Fantasy Travel application will allow users to request, add, update, or delete information about various locations. While all locations are not based in reality, weather information will be pulled from real life locations with similar climates. 
+
+The application is built using .NET framework. Weather data is captured through a public API that is then persisted in a T-Sql database that lives on the Azure cloud. A console is used to access a RESTful API, built using the ASP.NET framework, which allows the user to make individual requests. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

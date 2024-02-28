@@ -35,9 +35,9 @@ namespace FantasyTravel.Data
                 string name = reader["Name"].ToString() ?? "";
                 string description = reader["Description"].ToString() ?? "";
                 int language = (int)reader["Language"];
-                int biomType = (int)reader["BiomType"];
+                int biomeType = (int)reader["BiomeType"];
 
-                places.Add(new Place(language, biomType, name, description));
+                places.Add(new Place(language, biomeType, name, description));
             }
             await connection.CloseAsync();
 
@@ -66,9 +66,9 @@ namespace FantasyTravel.Data
                 string name = reader["Name"].ToString() ?? "";
                 string description = reader["Description"].ToString() ?? "";
                 int language = (int)reader["Language"];
-                int biomType = (int)reader["BiomType"];
+                int biomeType = (int)reader["BiomeType"];
 
-                tmpPlace = new Place(Id, language, biomType, name, description);
+                tmpPlace = new Place(Id, language, biomeType, name, description);
             }
             await connection.CloseAsync();
             return tmpPlace;
@@ -80,7 +80,7 @@ namespace FantasyTravel.Data
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
 
-            string cmdText = @"INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomType) VALUES (@id, @name, @description, @language, @biomtype);";
+            string cmdText = @"INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomeType) VALUES (@id, @name, @description, @language, @biomtype);";
 
             using SqlCommand cmd = new(cmdText, connection);
 
@@ -88,7 +88,7 @@ namespace FantasyTravel.Data
             cmd.Parameters.AddWithValue("@name", place.name);
             cmd.Parameters.AddWithValue("@description", place.description);
             cmd.Parameters.AddWithValue("@language", place.language);
-            cmd.Parameters.AddWithValue("@biomtype", place.biomType);
+            cmd.Parameters.AddWithValue("@biometype", place.biomeType);
          
 
             await cmd.ExecuteNonQueryAsync();

@@ -8,28 +8,28 @@ namespace FantasyTravel.Logic {
         private static int idSeed = 1;
         public string description {get; set;}
         public int language {get; set;}
-        public int biomType {get; set;}
+        public int biomeType {get; set;}
         //constructors
         public Place () {}
-        public Place (int language, int biomType, string name = "", string description = "") {
+        public Place (int language, int biomeType, string name = "", string description = "") {
             this.name = name;
             this.description = description;
-            this.biomType = biomType;
+            this.biomeType = biomeType;
             this.language = language;
             id = idSeed++;
         }
-        public Place(int id, int language, int biomType, string name = "", string description = "")
+        public Place(int id, int language, int biomeType, string name = "", string description = "")
         {
             this.name = name;
             this.description = description;
-            this.biomType = biomType;
+            this.biomeType = biomeType;
             this.language = language;
             this.id = id;
         }
         //methods
         public override string ToString()
         {
-            return $"Place\nName: {this.name}\nId: {this.id}\nDescription: {this.description}\biomType: {this.biomType}\n";
+            return $"Place\nName: {this.name}\nId: {this.id}\nDescription: {this.description}\bBiomeType: {this.biomeType}\n";
         }
     }
 }
