@@ -9,26 +9,22 @@ using FantasyTravelClient.DTO;
 
 namespace FantasyTravelClient.App
 {
-    public class TravelMenu
+    public static class TravelMenu
 
     {
 
-        private readonly string uri = "https://localhost:7288";
+        private static readonly string uri = "https://localhost:7288";
 
-        public TravelMenu()
-        {
-        }
-        public async Task Menu()
+        public static async Task Menu()
         {
             bool loop = true;
             while (loop)
             {
-                Console.WriteLine(@"Fantasy Travel App:
-                1: List All Travel Locations
-                2: List A Specific Travel Location
-                3: Create a New Travel Location
-                4: Delete a Travel Location
-                0: Exit");
+                Console.WriteLine("Select an option: ");
+                Console.WriteLine("1. List all places.");
+                Console.WriteLine("2. Display a specific place.");
+                Console.WriteLine("0. Exit program.");
+
                 string selection = Console.ReadLine();
 
                 string tmpuri = "";
@@ -36,51 +32,58 @@ namespace FantasyTravelClient.App
                 {
                     case "1":
                         tmpuri = uri + "/api/place/Place";
-                        Console.WriteLine(tmpuri);
+                        //Console.WriteLine(tmpuri);
                         Console.WriteLine(await ListAllPlacesAsync(tmpuri));
-                        Console.WriteLine("All travel locations listed!");
                         break;
-
                     case "2":
-                        Console.WriteLine("The specified travel location was returned");
+                        int id;
+                        Console.WriteLine("Please enter the id# of the desired place: ");
+                        Int32.TryParse(Console.ReadLine(), out id);
+                        tmpuri = uri + "/api/place/Place/" + id;
+                        //Console.WriteLine(tmpuri);
+                        Console.WriteLine(await ListPlaceByIdAsync(tmpuri));
                         break;
-
-                    case "3":
-                        Console.WriteLine("That new travel location was created");
-                        break;
-
-                    case "4":
-                        Console.WriteLine("That travel location was deleted");
-                        break;
-
                     case "0":
                         loop = false;
-                        break;
-
-                    default:
                         break;
                 }
             }
         }
-
-        public static async Task<string> ListAllPlacesAsync(string tmpuri)
+        private static async Task<string> ListAllPlacesAsync(string uri)
         {
-            Console.WriteLine("1");
             HttpClient client = new HttpClient();
-            Console.WriteLine("2");
-            string response = await client.GetStringAsync(tmpuri);
-            Console.WriteLine("3");
-            List<Place> places = JsonSerializer.Deserialize<List<Place>>(response);
-            Console.Write("4");
-            string result = "";
-
-            foreach (var p in places)
+            try
             {
-                result += p.ToString() + "\n";
+                string response = await client.GetStringAsync(uri);
+                Console.WriteLine(response);
+                List<Place> places = JsonSerializer.Deserialize<List<Place>>(response);
+                string result = "";
+                foreach (var p in places)
+                {
+                    result += p + "\n";
+                }
+                return result;
             }
-
-            return result;
-
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            return null;
+        }
+        private static async Task<string> ListPlaceByIdAsync(string uri)
+        {
+            HttpClient client = new HttpClient();
+            try
+            {
+                string response = await client.GetStringAsync(uri);
+                Place place = JsonSerializer.Deserialize<Place>(response);
+                return place.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            return null;
         }
     }
 }

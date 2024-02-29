@@ -37,7 +37,7 @@ namespace FantasyTravel.Data
                 int language = (int)reader["Language"];
                 int biomeType = (int)reader["BiomeType"];
 
-                places.Add(new Place(language, biomeType, name, description));
+                places.Add(new Place(Id, language, biomeType, name, description));
             }
             await connection.CloseAsync();
 
@@ -80,11 +80,12 @@ namespace FantasyTravel.Data
             using SqlConnection connection = new(_connectionString);
             await connection.OpenAsync();
 
-            string cmdText = @"INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomeType) VALUES (@id, @name, @description, @language, @biomtype);";
+            //string cmdText = @"INSERT INTO [FantasyTravel].[Places] (Id, Name, Description, Language, BiomeType) VALUES (@id, @name, @description, @language, @biometype);";
+            string cmdText = @"INSERT INTO [FantasyTravel].[Places] (Name, Description, Language, BiomeType) VALUES (@name, @description, @language, @biometype);";
 
             using SqlCommand cmd = new(cmdText, connection);
 
-            cmd.Parameters.AddWithValue("@id", place.id);
+            //cmd.Parameters.AddWithValue("@id", place.id);
             cmd.Parameters.AddWithValue("@name", place.name);
             cmd.Parameters.AddWithValue("@description", place.description);
             cmd.Parameters.AddWithValue("@language", place.language);

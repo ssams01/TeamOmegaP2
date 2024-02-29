@@ -29,7 +29,7 @@ namespace FantasyTravel.Logic {
         //methods
         public override string ToString()
         {
-            return $"Place\nName: {this.name}\nId: {this.id}\nDescription: {this.description}\bBiomeType: {this.biomeType}\n";
+            return $"Place\nName: {this.name}\nId: {this.id}\nDescription: {this.description}\nBiomeType: {this.biomeType}\n";
         }
     }
 }
