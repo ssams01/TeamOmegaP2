@@ -23,7 +23,7 @@ namespace FantasyTravel.Data
             //Console.WriteLine("Opening connection");
             await connection.OpenAsync();
             //Console.WriteLine("getting SQL statement");
-            string cmdText = "SELECT * FROM [FantasyTravel].[Places];";
+            string cmdText = "SELECT p.Id, p.Name, p.Description, p.Language, p.BiomeType, b.BiomeType as BiomeDesc, b.Temp FROM [FantasyTravel].[Places] as p JOIN [FantasyTravel].[Biomes] AS b ON p.BiomeType = b.Id;";
             using SqlCommand cmd = new SqlCommand(cmdText, connection);
             using SqlDataReader reader = await cmd.ExecuteReaderAsync();
             Console.WriteLine("Reader executed...");
@@ -36,8 +36,9 @@ namespace FantasyTravel.Data
                 string description = reader["Description"].ToString() ?? "";
                 int language = (int)reader["Language"];
                 int biomeType = (int)reader["BiomeType"];
+                double temp = (double)reader["Temp"];
 
-                places.Add(new Place(Id, language, biomeType, name, description));
+                places.Add(new Place(Id, language, biomeType, temp, name, description));
             }
             await connection.CloseAsync();
 
@@ -111,6 +112,43 @@ namespace FantasyTravel.Data
             await connection.CloseAsync();
 
             _logger.LogInformation("Executed DeletePlaceByIdAsync; place id #{0} deleted.", id);
+        }
+
+        public async Task<IEnumerable<Biome>> GetAllBiomesAsync() {
+            using SqlConnection connection = new SqlConnection(this._connectionString);
+            await connection.OpenAsync();
+            string cmdText = "SELECT * FROM [FantasyTravel].[Biomes];";
+            using SqlCommand cmd = new SqlCommand(cmdText, connection);
+
+            using SqlDataReader reader = await cmd.ExecuteReaderAsync();
+            List<Biome> biomes = new List<Biome>();
+
+            while(await reader.ReadAsync()) {
+                int id = (int)reader["id"];
+                int x = (int)reader["x"];
+                int y = (int)reader["y"];
+
+                biomes.Add(new Biome(id, x, y));
+            }
+            await connection.CloseAsync();
+
+            _logger.LogInformation("Executed get all biomes, returned {0} results.", biomes.Count);
+            return biomes;
+        }
+        public async Task UpdateBiomeTemperatureAsync(int id, double temp) {
+            using SqlConnection connection = new SqlConnection(this._connectionString);
+            await connection.OpenAsync();
+            string cmdText = "UPDATE [FantasyTravel].[Biomes] SET temp = @temp WHERE id = @id";
+            using SqlCommand cmd = new(cmdText, connection);
+
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@temp", temp);
+
+            await cmd.ExecuteNonQueryAsync();
+            await connection.CloseAsync();
+
+            _logger.LogInformation("executed updateBiomeTemperature ");
+
         }
     }
 }

@@ -13,7 +13,8 @@ CREATE TABLE [FantasyTravel].[Biomes]
     x int NOT NULL,
     y int NOT NULL,
     biomeType VARCHAR(255),
-    realLifeReference VARCHAR(255)
+    realLifeReference VARCHAR(255),
+    temp float,
 )
 
 CREATE TABLE [FantasyTravel].[Places]
@@ -32,6 +33,7 @@ GO
 */
 /*
 DROP TABLE [FantasyTravel].[Places];
+DROP TABLE [FantasyTravel].[Biomes];
 DROP SCHEMA [FantasyTravel];
 GO
 */
@@ -83,3 +85,7 @@ GO
 
 SELECT * FROM [FantasyTravel].[Biomes];
 GO
+
+UPDATE [FantasyTravel].[Biomes] SET x = 42, y = 20 WHERE id = 4;
+
+SELECT p.Id, p.Name, p.Description, p.Language, p.BiomeType, b.BiomeType as biomeDesc, b.Temp FROM [FantasyTravel].[Places] as p JOIN [FantasyTravel].[Biomes] AS b ON p.BiomeType = b.Id;

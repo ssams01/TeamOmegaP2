@@ -29,6 +29,7 @@ namespace FantasyTravel.Data
             var request = new HttpRequestMessage(HttpMethod.Get, $"{this._uri1}/{x},{y}/{this._uri2}")
             var response = await client.SendAsync(request);
             */
+            Console.WriteLine($"{this._uri1}/{x},{y}/{this._uri2}");
             string response = await client.GetStringAsync($"{this._uri1}/{x},{y}/{this._uri2}");
             //Console.WriteLine(response);
             var jsonResult1 = JsonSerializer.Deserialize<JsonElement>(response).GetProperty("properties");
@@ -42,5 +43,6 @@ namespace FantasyTravel.Data
             Weather weather = new Weather (Math.Round(jsonResult4.GetDouble(), 2), 0);
             return weather;
         }
+        
     }
 }

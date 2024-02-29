@@ -25,6 +25,7 @@ namespace FantasyTravelClient.App
 
         public static async Task Menu()
         {
+            
             bool loop = true;
             while (loop)
             {

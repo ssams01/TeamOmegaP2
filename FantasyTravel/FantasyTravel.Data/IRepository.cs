@@ -8,5 +8,7 @@ namespace FantasyTravel.Data
         public Task<Place> GetPlaceByIdAsync (int id);
         public Task EnterNewPlaceAsync (Place place);
         public Task DeletePlaceByIdAsync (int id);
+        public Task<IEnumerable<Biome>> GetAllBiomesAsync();
+        public Task UpdateBiomeTemperatureAsync(int id, double temp);
     }
 }
