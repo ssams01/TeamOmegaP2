@@ -46,10 +46,10 @@ namespace FantasyTravelClient.App
                         Console.WriteLine(await ListAllPlacesAsync(tmpuri));
                         break;
                     case "2":
-                        int id;
+                        int idToGet;
                         Console.WriteLine("Please enter the id# of the desired place: ");
-                        Int32.TryParse(Console.ReadLine(), out id);
-                        tmpuri = uri + "/api/place/Place/" + id;
+                        Int32.TryParse(Console.ReadLine(), out idToGet);
+                        tmpuri = uri + "/api/place/Place/" + idToGet;
                         //Console.WriteLine(tmpuri);
                         Console.WriteLine(await ListPlaceByIdAsync(tmpuri));
                         break;
@@ -59,6 +59,11 @@ namespace FantasyTravelClient.App
                         Console.WriteLine(await EnterNewPlaceAsync(tmpuri, tmpPlace));
                         break;
                     case "4":
+                        int idToDelete;
+                        Console.WriteLine("Please enter the id# of the place you wish to delete: ");
+                        Int32.TryParse(Console.ReadLine(), out idToDelete);
+                        tmpuri = uri + "/api/place/Place/" + idToDelete;
+                        Console.WriteLine(await DeletePlaceByIdAsync(tmpuri));
                         break;
                     case "0":
                         loop = false;
@@ -189,6 +194,25 @@ namespace FantasyTravelClient.App
             catch (Exception ex)
             {
                 Console.WriteLine(ex);                
+            }
+            return false;
+        }
+
+        private static async Task<bool> DeletePlaceByIdAsync (string uri)
+        {
+            HttpClient client = new HttpClient();
+            try
+            {
+                var response = await client.DeleteAsync(uri);
+                Console.WriteLine(response);
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
             return false;
         }
