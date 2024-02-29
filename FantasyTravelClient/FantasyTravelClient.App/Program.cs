@@ -36,6 +36,12 @@ namespace FantasyTravelClient.App
                         Console.WriteLine(await ListAllPlacesAsync(tmpuri));
                         break;
                     case "2":
+                        int id;
+                        Console.WriteLine("Please enter the id# of the desired place (starting at 6): ");
+                        Int32.TryParse(Console.ReadLine(), out id);
+                        tmpuri = uri + "/api/place/Place/" + id;
+                        Console.WriteLine(tmpuri);
+                        Console.WriteLine(await ListPlaceByIdAsync(tmpuri));
                         Console.WriteLine("option 2 selected");
                         break;
                     case "0":
@@ -58,6 +64,36 @@ namespace FantasyTravelClient.App
                 result += p + "\n";
             }
             return result;
+            /*
+            try
+            {
+                string response = await client.GetStringAsync(uri);
+                Console.WriteLine(response);
+                List<Place> places = JsonSerializer.Deserialize<List<Place>>(response);
+                string result = "";
+                foreach (var p in places)
+                {
+                    result += p + "\n";
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            return null;
+            */
+        }
+        private static async Task<string> ListPlaceByIdAsync(string uri)
+        {
+            HttpClient client = new HttpClient();
+            Console.WriteLine("httpClient created");
+            string response = await client.GetStringAsync(uri);
+            Console.WriteLine(response);
+            Place place = JsonSerializer.Deserialize<Place>(response);
+
+
+            return place.ToString();
             /*
             try
             {
