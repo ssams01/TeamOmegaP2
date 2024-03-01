@@ -54,7 +54,7 @@ namespace FantasyTravel.Data
             using SqlConnection connection = new SqlConnection(this._connectionString);
             await connection.OpenAsync();
 
-            string cmdText = "SELECT * From [FantasyTravel].[Places] WHERE Id = @id;";
+            string cmdText = "SELECT p.Id, p.Name, p.Description, p.Language, p.BiomeType, b.BiomeType as BiomeDesc, b.Temp FROM [FantasyTravel].[Places] as p JOIN [FantasyTravel].[Biomes] AS b ON p.BiomeType = b.Id WHERE p.Id = @id;";
 
             using SqlCommand cmd = new SqlCommand(cmdText, connection);
 
