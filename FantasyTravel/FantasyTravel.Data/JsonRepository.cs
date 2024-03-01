@@ -25,21 +25,15 @@ namespace FantasyTravel.Data
             using HttpClient client = new HttpClient ();
             var authorization = new ProductInfoHeaderValue("authKey", "Project2Testing");
             client.DefaultRequestHeaders.UserAgent.Add(authorization);
-            /*
-            var request = new HttpRequestMessage(HttpMethod.Get, $"{this._uri1}/{x},{y}/{this._uri2}")
-            var response = await client.SendAsync(request);
-            */
-            Console.WriteLine($"{this._uri1}/{x},{y}/{this._uri2}");
+            
+            //Console.WriteLine($"{this._uri1}/{x},{y}/{this._uri2}");
             string response = await client.GetStringAsync($"{this._uri1}/{x},{y}/{this._uri2}");
-            //Console.WriteLine(response);
+
             var jsonResult1 = JsonSerializer.Deserialize<JsonElement>(response).GetProperty("properties");
-            //Console.WriteLine(jsonResult1.ToString());
             var jsonResult2 = JsonSerializer.Deserialize<JsonElement>(jsonResult1.ToString()).GetProperty("temperature");
             var jsonResult3 = JsonSerializer.Deserialize<JsonElement>(jsonResult2.ToString()).GetProperty("values");
-            //Console.WriteLine(jsonResult3);
             var jsonResult4 = JsonSerializer.Deserialize<JsonElement>(jsonResult3[0].ToString()).GetProperty("value");
-            //Console.WriteLine(jsonResult4.ToString());
-            //Weather weather = JsonSerializer.Deserialize<Weather>(response);
+
             Weather weather = new Weather (Math.Round(jsonResult4.GetDouble(), 2), 0);
             return weather;
         }

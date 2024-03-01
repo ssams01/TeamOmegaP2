@@ -13,13 +13,6 @@ namespace FantasyTravel.Api.Controllers
         private readonly IRepository _repo;
         private readonly ILogger<PlaceController> _logger;
 
-        /*
-        public IActionResult Index()
-        {
-            return View();
-        }
-        */
-
         public PlaceController(IRepository repo, ILogger<PlaceController> logger)
         {
             this._repo = repo;

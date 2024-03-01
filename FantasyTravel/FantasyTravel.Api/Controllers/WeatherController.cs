@@ -10,13 +10,6 @@ namespace FantasyTravel.Api.Controllers
     [ApiController]
     public class WeatherController : ControllerBase
     {
-        /*
-        public IActionResult Index()
-        {
-            return View();
-        }
-        */
-
         private readonly JsonRepository _repo;
         private readonly ILogger<WeatherController> _logger;
 

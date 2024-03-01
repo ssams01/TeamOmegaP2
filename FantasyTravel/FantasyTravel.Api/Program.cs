@@ -32,6 +32,7 @@ builder.Services.AddSingleton<JsonRepository>(wc => new JsonRepository(uri1, uri
 
 var app = builder.Build();
 
+// Initialize BiomeType linking table with "current" temperature reference values.
 IEnumerable<Biome> biomes = await app.Services.GetService<IRepository>().GetAllBiomesAsync();
 foreach (Biome b in biomes)
 {

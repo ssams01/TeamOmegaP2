@@ -20,13 +20,10 @@ namespace FantasyTravel.Data
         public async Task<IEnumerable<Place>> GetAllPlacesAsync ()
         {
             using SqlConnection connection = new SqlConnection(this._connectionString);
-            //Console.WriteLine("Opening connection");
             await connection.OpenAsync();
-            //Console.WriteLine("getting SQL statement");
             string cmdText = "SELECT p.Id, p.Name, p.Description, p.Language, p.BiomeType, b.BiomeType as BiomeDesc, b.Temp FROM [FantasyTravel].[Places] as p JOIN [FantasyTravel].[Biomes] AS b ON p.BiomeType = b.Id;";
             using SqlCommand cmd = new SqlCommand(cmdText, connection);
             using SqlDataReader reader = await cmd.ExecuteReaderAsync();
-            Console.WriteLine("Reader executed...");
             List<Place> places = new List<Place>();
             Random rng = new Random();
 
