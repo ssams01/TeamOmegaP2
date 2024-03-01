@@ -47,7 +47,7 @@ namespace FantasyTravelClient.DTO {
         //methods
         public override string ToString()
         {
-            return $"Place\nName: {this.name}\nId: {this.id}\nDescription: {this.description}\nBiomeType: {this.biomeType}\n";
+            return $"[Place]\nID: {this.id}\nName: {this.name}\nBiomeType: {this.biomeType}\nCurrent Temperature (F): {this.temp}\nDescription: {this.description}";
         }
     }
 }

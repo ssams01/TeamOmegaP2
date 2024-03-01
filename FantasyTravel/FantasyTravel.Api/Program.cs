@@ -36,7 +36,7 @@ IEnumerable<Biome> biomes = await app.Services.GetService<IRepository>().GetAllB
 foreach (Biome b in biomes)
 {
     Weather weather = await app.Services.GetService<JsonRepository>().GetWeatherByCoordinatesAsync(b.x, b.y);
-    await app.Services.GetService<IRepository>().UpdateBiomeTemperatureAsync(b.id, weather.temperature);
+    await app.Services.GetService<IRepository>().UpdateBiomeTemperatureAsync(b.id, Math.Round((weather.temperature * -1.8) + 32, 2));
 }
 
 

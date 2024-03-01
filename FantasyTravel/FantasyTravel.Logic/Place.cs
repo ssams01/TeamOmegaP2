@@ -47,7 +47,7 @@ namespace FantasyTravel.Logic {
         //methods
         public override string ToString()
         {
-            return $"Place\nName: {this.name}\nId: {this.id}\nDescription: {this.description}\nBiomeType: {this.biomeType}\n";
+            return $"[Place] ID: {this.id}\nName: {this.name}\n\nDescription: {this.description}\nBiomeType: {this.biomeType}\nCurrent Temperature (F): {this.temp}";
         }
     }
 }

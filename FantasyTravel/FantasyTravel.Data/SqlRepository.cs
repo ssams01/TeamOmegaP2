@@ -28,6 +28,7 @@ namespace FantasyTravel.Data
             using SqlDataReader reader = await cmd.ExecuteReaderAsync();
             Console.WriteLine("Reader executed...");
             List<Place> places = new List<Place>();
+            Random rng = new Random();
 
             while (await reader.ReadAsync())
             {
@@ -36,7 +37,8 @@ namespace FantasyTravel.Data
                 string description = reader["Description"].ToString() ?? "";
                 int language = (int)reader["Language"];
                 int biomeType = (int)reader["BiomeType"];
-                double temp = (double)reader["Temp"];
+
+                double temp = Math.Round((double)reader["Temp"] * (0.9 + (rng.NextDouble() * 0.2)), 2);
 
                 places.Add(new Place(Id, language, biomeType, temp, name, description));
             }
@@ -60,6 +62,7 @@ namespace FantasyTravel.Data
 
             using SqlDataReader reader = await cmd.ExecuteReaderAsync();
             Place tmpPlace = new Place();
+            Random rng = new Random();
 
             while (await reader.ReadAsync())
             {
@@ -69,7 +72,9 @@ namespace FantasyTravel.Data
                 int language = (int)reader["Language"];
                 int biomeType = (int)reader["BiomeType"];
 
-                tmpPlace = new Place(Id, language, biomeType, name, description);
+                double temp = Math.Round((double)reader["Temp"] * (0.9 + (rng.NextDouble() * 0.2)), 2);
+
+                tmpPlace = new Place(Id, language, biomeType, temp, name, description);
             }
             await connection.CloseAsync();
             return tmpPlace;

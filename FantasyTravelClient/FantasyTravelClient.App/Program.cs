@@ -44,7 +44,7 @@ namespace FantasyTravelClient.App
                     case "1":
                         tmpuri = uri + "/api/place/Place";
                         //Console.WriteLine(tmpuri);
-                        Console.WriteLine(await ListAllPlacesAsync(tmpuri));
+                        DisplayResult(await ListAllPlacesAsync(tmpuri));
                         break;
                     case "2":
                         int idToGet;
@@ -52,19 +52,19 @@ namespace FantasyTravelClient.App
                         Int32.TryParse(Console.ReadLine(), out idToGet);
                         tmpuri = uri + "/api/place/Place/" + idToGet;
                         //Console.WriteLine(tmpuri);
-                        Console.WriteLine(await ListPlaceByIdAsync(tmpuri));
+                        DisplayResult(await ListPlaceByIdAsync(tmpuri));
                         break;
                     case "3":
                         tmpuri = uri + "/api/place/Place";
                         Place tmpPlace = BuildUserPlace();
-                        Console.WriteLine(await EnterNewPlaceAsync(tmpuri, tmpPlace));
+                        DisplayResult((await EnterNewPlaceAsync(tmpuri, tmpPlace)).ToString());
                         break;
                     case "4":
                         int idToDelete;
                         Console.WriteLine("Please enter the id# of the place you wish to delete: ");
                         Int32.TryParse(Console.ReadLine(), out idToDelete);
                         tmpuri = uri + "/api/place/Place/" + idToDelete;
-                        Console.WriteLine(await DeletePlaceByIdAsync(tmpuri));
+                        DisplayResult((await DeletePlaceByIdAsync(tmpuri)).ToString());
                         break;
                     case "0":
                         loop = false;
@@ -74,6 +74,13 @@ namespace FantasyTravelClient.App
                         break;
                 }
             }
+        }
+
+        private static void DisplayResult (string content)
+        {
+            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine(content);
+            Console.WriteLine("-----------------------------------------------------");
         }
 
         private static Place BuildUserPlace ()
@@ -144,12 +151,12 @@ namespace FantasyTravelClient.App
             try
             {
                 string response = await client.GetStringAsync(uri);
-                Console.WriteLine(response);
+                //Console.WriteLine(response);
                 List<Place> places = JsonSerializer.Deserialize<List<Place>>(response);
                 string result = "";
                 foreach (var p in places)
                 {
-                    result += p + "\n";
+                    result += "\n" + p + "\n";
                 }
                 return result;
             }
@@ -181,10 +188,10 @@ namespace FantasyTravelClient.App
             try
             {
                 var placeContent = new StringContent(JsonSerializer.Serialize(place));
-                Console.WriteLine("placeContent: \n" + JsonSerializer.Serialize(place) + "\n");
+                //Console.WriteLine("placeContent: \n" + JsonSerializer.Serialize(place) + "\n");
                 placeContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
                 var response = await client.PostAsync(uri, placeContent);
-                Console.WriteLine(response);
+                //Console.WriteLine(response);
                 if (response.IsSuccessStatusCode)
                 {
                     //var result = await response.Content.ReadAsAsync<bool>();
@@ -205,7 +212,7 @@ namespace FantasyTravelClient.App
             try
             {
                 var response = await client.DeleteAsync(uri);
-                Console.WriteLine(response);
+                //Console.WriteLine(response);
                 if (response.IsSuccessStatusCode)
                 {
                     return true;
