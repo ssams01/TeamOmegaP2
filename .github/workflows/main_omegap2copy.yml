@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT_ROOT: 'FantasyTravelClient/'
+  PROJECT_ROOT: 'FantasyTravelClient/FantasyTravelClient.sln'
 
 jobs:
   build:
